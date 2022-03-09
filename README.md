@@ -14,5 +14,6 @@ This repository contains everything required for Exercise 3 of the Web-based Aut
 │   ├── generate_train.py # Helper that puts names of training images into a textfile, Task 3
 │   ├── generate_test.py # Helper that puts names of test images into a textfile, Task 3
 │   └── yolov4-obj_final.weights # Trained YOLOv4 weights for our laboratory environment
+├── graphDBstarter # kick-off code for Task 2
 └── README.md # this README.md
 ```
