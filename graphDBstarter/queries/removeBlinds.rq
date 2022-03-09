@@ -1,0 +1,5 @@
+PREFIX was: <https://was-course.interactions.ics.unisg.ch/>
+
+WITH <https://interactions.ics.unisg.ch/was-assignment-3#>
+DELETE { ?blind a was:Blind. }
+WHERE { ?blind a was:Blind. }

@@ -1,0 +1,11 @@
+PREFIX was: <https://was-course.interactions.ics.unisg.ch/>
+
+INSERT {
+    GRAPH <https://interactions.ics.unisg.ch/was-assignment-3-simon#>
+    {
+        ?newBlind a was:Blind.
+		?newBlind was:locatedIn was:Room-1.
+    }.
+} WHERE {
+	BIND(IRI(CONCAT("https://was-course.interactions.ics.unisg.ch/#Blind-", strUUID())) AS ?newBlind)
+}

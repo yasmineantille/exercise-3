@@ -1,0 +1,8 @@
+PREFIX was: <https://was-course.interactions.ics.unisg.ch/>
+
+SELECT ?blind ?location WHERE {
+GRAPH <https://interactions.ics.unisg.ch/was-assignment-3-simon#> {
+   ?blind a was:Blind.    
+   ?blind was:locatedIn ?location.
+ }
+}
