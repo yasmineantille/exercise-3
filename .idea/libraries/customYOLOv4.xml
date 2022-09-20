@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="customYOLOv4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/customYOLOv4/test.zip!/" />
+      <root url="jar://$PROJECT_DIR$/customYOLOv4/obj.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

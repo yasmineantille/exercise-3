@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/yasmi/ontologies/2022/2/was-ontology#"
+     xml:base="http://www.semanticweb.org/yasmi/ontologies/2022/2/was-ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/yasmi/ontologies/2022/2/was-ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://brickschema.org/schema/Brick#hasPart -->
+
+    <owl:ObjectProperty rdf:about="https://brickschema.org/schema/Brick#hasPart">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="https://brickschema.org/schema/Brick#isPartOf"/>
+        <rdfs:domain rdf:resource="http://purl.org/iot/vocab/iot-taxonomy-lite#Blind"/>
+        <rdfs:domain rdf:resource="https://saref.etsi.org/saref4bldg/Lamp"/>
+        <rdfs:range rdf:resource="https://w3id.org/dco#Room"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://brickschema.org/schema/Brick#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="https://brickschema.org/schema/Brick#isPartOf">
+        <rdfs:domain rdf:resource="https://w3id.org/dco#Room"/>
+        <rdfs:range rdf:resource="http://purl.org/iot/vocab/iot-taxonomy-lite#Blind"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/saref4bldg/Lamp"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4bldg/Lamp#hasGoal -->
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4bldg/Lamp#hasGoal">
+        <owl:inverseOf rdf:resource="https://saref.etsi.org/saref4bldg/Lamp#isGoalOf"/>
+        <rdfs:domain rdf:resource="https://saref.etsi.org/saref4bldg/Lamp#Darker"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/saref4bldg/Lamp#BlindDown"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/saref4bldg/Lamp#LampOff"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/saref4bldg/Lamp#isGoalOf -->
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4bldg/Lamp#isGoalOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://saref.etsi.org/saref4bldg/Lamp#BlindDown"/>
+        <rdfs:domain rdf:resource="https://saref.etsi.org/saref4bldg/Lamp#LampOff"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/saref4bldg/Lamp#Darker"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dco#hasProperty -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dco#hasProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/dco#isPropertyOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/dco#Light"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/saref4bldg/Lamp"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/dco#isPropertyOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/dco#isPropertyOf">
+        <rdfs:domain rdf:resource="https://saref.etsi.org/saref4bldg/Lamp"/>
+        <rdfs:range rdf:resource="https://w3id.org/dco#Light"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/iot/vocab/iot-taxonomy-lite#Blind -->
+
+    <owl:Class rdf:about="http://purl.org/iot/vocab/iot-taxonomy-lite#Blind"/>
+    
+
+
+    <!-- http://purl.org/ipo/core#Procedure -->
+
+    <owl:Class rdf:about="http://purl.org/ipo/core#Procedure"/>
+    
+
+
+    <!-- https://brickschema.org/schema/Brick#Lighting_System -->
+
+    <owl:Class rdf:about="https://brickschema.org/schema/Brick#Lighting_System"/>
+    
+
+
+    <!-- https://saref.etsi.org/saref4bldg/Lamp -->
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4bldg/Lamp">
+        <rdfs:subClassOf rdf:resource="https://brickschema.org/schema/Brick#Lighting_System"/>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4bldg/Lamp#BlindDown -->
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4bldg/Lamp#BlindDown">
+        <rdfs:subClassOf rdf:resource="http://purl.org/iot/vocab/iot-taxonomy-lite#Blind"/>
+        <owl:disjointWith rdf:resource="https://saref.etsi.org/saref4bldg/Lamp#BlindUp"/>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4bldg/Lamp#BlindUp -->
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4bldg/Lamp#BlindUp">
+        <rdfs:subClassOf rdf:resource="http://purl.org/iot/vocab/iot-taxonomy-lite#Blind"/>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4bldg/Lamp#Brighter -->
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4bldg/Lamp#Brighter">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4bldg/Lamp#IlluminationGoal"/>
+        <owl:disjointWith rdf:resource="https://saref.etsi.org/saref4bldg/Lamp#Darker"/>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4bldg/Lamp#Darker -->
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4bldg/Lamp#Darker">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4bldg/Lamp#IlluminationGoal"/>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4bldg/Lamp#IlluminationGoal -->
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4bldg/Lamp#IlluminationGoal">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ipo/core#Procedure"/>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4bldg/Lamp#LampOff -->
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4bldg/Lamp#LampOff">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4bldg/Lamp"/>
+        <owl:disjointWith rdf:resource="https://saref.etsi.org/saref4bldg/Lamp#LampOn"/>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4bldg/Lamp#LampOn -->
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4bldg/Lamp#LampOn">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4bldg/Lamp"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dco#Light -->
+
+    <owl:Class rdf:about="https://w3id.org/dco#Light">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/dco#Property"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/dco#Property -->
+
+    <owl:Class rdf:about="https://w3id.org/dco#Property"/>
+    
+
+
+    <!-- https://w3id.org/dco#Room -->
+
+    <owl:Class rdf:about="https://w3id.org/dco#Room"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

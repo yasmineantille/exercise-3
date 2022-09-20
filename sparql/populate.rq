@@ -1,0 +1,17 @@
+PREFIX room: <https://w3id.org/dco#Room>
+PREFIX was: <http://www.semanticweb.org/yasmi/ontologies/2022/2/was-ontology#>
+PREFIX brick: <https://brickschema.org/schema/Brick#>
+
+INSERT {
+    GRAPH <https://interactions.ics.unisg.ch/was-assignment-3-yasmine#>
+    {
+        ?newBlind a was:BlindDown.
+        ?newBlind brick:isPartOf room:Room.
+
+        ?newLamp a was:LampOff.
+        ?newLamp brick:isPartOf room:Room.
+    }.
+} WHERE {
+    BIND(IRI(CONCAT("https://was-course.interactions.ics.unisg.ch/was-assignment-3-yasmine/#Blind", strUUID())) AS ?newBlind).
+    BIND(IRI(CONCAT("https://was-course.interactions.ics.unisg.ch/was-assignment-3-yasmine/#Lamp", strUUID())) AS ?newLamp).
+}
